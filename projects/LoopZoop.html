@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body id="body">
+    <!-- <input type="text" id="nMax" placeholder="Enter minimum n">
+    <br>
+    <input type="text" id="nMin" placeholder="Enter maximum n">
+    <br>
+    <input type="text" id="n" placeholder="Enter increment/decrement">
+    <br>
+    <button id="calculate" onclick="calculateIncrement()">Calculate</button>
+    <button id="calculate" onclick="calculateDecrement()">Calculate</button> -->
+
+    <script>
+        //copied from linescale, discord
+    let programLimit = parseInt(prompt(`What number would you like the program to stop at?`));
+    let programStart = parseInt(prompt(`What number would you like the program to start at?`));
+
+    integerIncrement = (s, n) => { // s = start, n = end.
+
+    while (s < n) {
+        document.write(`Number ${s}.<br>`);
+        s++;
+    }
+}
+
+integerIncrement(programStart, programLimit);
+    </script>
+</body>
+</html>

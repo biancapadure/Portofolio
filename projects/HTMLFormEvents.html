@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Write something in the text field to trigger a function.</p>
+
+    <input type="text" id="myInput" oninput="myFunction1()">
+    
+    <p id="demo1"></p>
+    
+    <br>
+    <br>
+
+    Enter your name: <input id="myInput2" type="text" onfocus="myFunction2()">
+
+    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+    <br>
+    <br>
+
+    <form onsubmit="myFunction3()">
+        Enter name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <br>
+
+    Some text: <input type="text" value="Select me!!" onselect="myFunction4()">
+    <p>The function myFunction() is triggered when some text is selected in the input field. The function shows a message.</p>
+
+    <br>
+    <br>
+
+    <p>When you reset the form, a function is triggered which alerts some text.</p>
+
+    <form onreset="myFunction5()">
+    Enter name: <input type="text">
+    <input type="reset">
+    </form>
+
+    <script>
+
+    function myFunction1() {
+      var x = document.getElementById("myInput").value;
+      document.getElementById("demo1").innerHTML = "You wrote: " + x;
+    }
+
+    function myFunction2() {
+        var x = document.getElementById("myInput2");
+        x.style.background = "yellow";
+    }
+
+    function myFunction3() {
+    alert("The form was submitted");
+    }
+
+    function myFunction4() {
+        alert("You have selected some text!");
+    }
+
+    function myFunction5() {
+  alert("The form was reset");
+}
+    </script>
+</body>
+</html>

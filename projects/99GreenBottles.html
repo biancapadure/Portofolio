@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Zoop</title>
+    <style>
+        *{
+            text-align:center;
+            font-family: -webkit-pictograph, sans-serif;
+            background-color: #252525;
+            color: #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+    <h1>99 green bottles</h1>
+    <button onclick="load()">Load</button>
+    <div id="rez"></div>
+    <script>   
+    function load(){
+    function addToRes(x){
+                let txt = document.createElement("div");
+                txt.innerHTML = x;
+                document.getElementById("rez").appendChild(txt);
+                }
+
+        for (i=99; i>0; i--){
+            
+            var for1 = "And if one should accidentally fall "
+            if(i==1){
+            
+            var repeat = (parseInt(i)) + " green bottle hanging on the wall <br>"
+                
+
+            
+            addToRes(repeat);
+            addToRes(repeat);
+            addToRes(for1);
+            addToRes("There will be no green bottles sitting on the wall.")
+            
+            // console.log(repeat);
+
+            // console.log(repeat);
+            
+            // console.log(for1);
+            
+            //console.log("There will be no green bottles sitting on the wall.")
+            
+        }
+
+            else{
+            var repeat = (parseInt(i)) + " green bottles hanging on the wall"
+
+          
+            addToRes(repeat);
+            addToRes(repeat);
+            addToRes(for1);
+            addToRes("There will be " + (parseInt(i-1)) + " green bottles sitting on the wall.");
+            document.getElementById("rez").appendChild(document.createElement("br"));
+            }
+        }
+    } 
+    </script>
+</body>
+</html>

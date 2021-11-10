@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onclick
+onmousemove
+onmousedown
+plus one of your choice -->
+    <button onclick="myFunction()">Click me</button>
+
+    <p id="demo"></p>
+
+    <p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p>
+    
+    <br>
+    <br>
+
+    <p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph. The function sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released. The mouseUp() function sets the color of the text to green.
+    </p>
+
+    <br>
+    <br>
+
+    <h1 id="blue" style="color: blue; width:fit-content" onmousemove=dabadee() onmouseout=dabadi()>I'm blue</h1>
+
+    <script>
+    function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+    }
+
+    function mouseDown() {
+       document.getElementById("p1").style.color = "red";
+    }
+
+    function mouseUp() {
+        document.getElementById("p1").style.color = "green";
+    }
+
+    function dabadee(){
+        document.getElementById("blue").innerHTML="Da ba dee";
+    }
+
+    function dabadi(){
+        document.getElementById("blue").innerHTML="Da ba di";
+    }
+
+    </script>
+</body>
+</html>

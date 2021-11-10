@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <input type="text" id="fromCm" placeholder="Enter CM here">
+    <input type="button" value="Calculate" onclick="calculateCm()">
+    <script >    
+        function calculateCm(){
+           var fromCm = document.getElementById("fromCm").value;
+           var conversionCm = fromCm/2.54;
+            document.getElementById("toInches").innerHTML = conversionCm;
+        }
+    </script>
+    <p>The xx CM is <span id="toInches">Result will be displayed here</span> inches</p>
+    
+    <br>
+    
+    <input type=number id=fromInch placeholder="Enter inches here">
+    <input type="button" value="Calculate" onclick="calculateInch()">
+    <script>
+        function calculateInch(){
+            var fromInch = document.getElementById("fromInch").value;
+            var conversionInch = fromInch*2.54;
+            document.getElementById("toCm").innerHTML = conversionInch;
+        }  
+    </script>
+    <p id="toCm">Result will be displayed here</p>
+    <br>
+    
+</body>
+</html>
